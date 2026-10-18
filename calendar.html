@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TaskFlow Calendar - View task deadlines, reminders, and scheduled tasks in a calendar layout.">
+  <title>TaskFlow - Calendar &amp; Deadlines</title>
+  <!-- Shared Common Styles -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- Member 5: Admin & Calendar Styles -->
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <div class="app-layout">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">✓</div>
+        <h1>TaskFlow</h1>
+      </div>
+
+      <nav class="sidebar-nav">
+        <span class="nav-section-title">Main</span>
+        <a href="dashboard.html" class="nav-link">
+          <span class="nav-icon">📊</span>
+          Dashboard
+        </a>
+        <a href="add-task.html" class="nav-link">
+          <span class="nav-icon">➕</span>
+          Add Task
+        </a>
+        <a href="categories.html" class="nav-link">
+          <span class="nav-icon">📁</span>
+          Categories
+        </a>
+        <a href="calendar.html" class="nav-link active">
+          <span class="nav-icon">📅</span>
+          Calendar
+          <span class="nav-badge">3</span>
+        </a>
+
+        <span class="nav-section-title">Admin</span>
+        <a href="admin.html" class="nav-link">
+          <span class="nav-icon">⚙️</span>
+          Admin Panel
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user">
+          <div class="user-avatar">NE</div>
+          <div class="user-info">
+            <div class="user-name">Nour Elkady</div>
+            <div class="user-email">nour@taskflow.com</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div>
+          <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+          <h2>Calendar &amp; Deadlines</h2>
+          <p>View your task deadlines and upcoming reminders at a glance.</p>
+        </div>
+        <a href="add-task.html" class="btn btn-primary">+ Add Task</a>
+      </div>
+
+      <!-- Calendar Layout: Calendar + Day Details -->
+      <div class="calendar-layout">
+
+        <!-- Calendar Card -->
+        <div class="calendar-card glass-card">
+          <div class="calendar-header">
+            <h3>October 2025</h3>
+            <div class="calendar-nav">
+              <button class="cal-nav-btn" title="Previous month">◀</button>
+              <button class="btn btn-ghost btn-sm">Today</button>
+              <button class="cal-nav-btn" title="Next month">▶</button>
+            </div>
+          </div>
+
+          <div class="calendar-grid">
+            <!-- Day Headers -->
+            <div class="day-header">Sun</div>
+            <div class="day-header">Mon</div>
+            <div class="day-header">Tue</div>
+            <div class="day-header">Wed</div>
+            <div class="day-header">Thu</div>
+            <div class="day-header">Fri</div>
+            <div class="day-header">Sat</div>
+
+            <!-- Week 1 (Sep 28 - Oct 4) -->
+            <div class="day-cell other-month">28</div>
+            <div class="day-cell other-month">29</div>
+            <div class="day-cell other-month">30</div>
+            <div class="day-cell">1</div>
+            <div class="day-cell">2</div>
+            <div class="day-cell">3</div>
+            <div class="day-cell">4</div>
+
+            <!-- Week 2 (Oct 5 - 11) -->
+            <div class="day-cell">5</div>
+            <div class="day-cell">6</div>
+            <div class="day-cell">7</div>
+            <div class="day-cell">8</div>
+            <div class="day-cell">9</div>
+            <div class="day-cell has-task">10</div>
+            <div class="day-cell">11</div>
+
+            <!-- Week 3 (Oct 12 - 18) -->
+            <div class="day-cell">12</div>
+            <div class="day-cell">13</div>
+            <div class="day-cell">14</div>
+            <div class="day-cell">15</div>
+            <div class="day-cell">16</div>
+            <div class="day-cell today">17</div>
+            <div class="day-cell has-task">18</div>
+
+            <!-- Week 4 (Oct 19 - 25) -->
+            <div class="day-cell">19</div>
+            <div class="day-cell has-task-high selected">20</div>
+            <div class="day-cell">21</div>
+            <div class="day-cell has-task">22</div>
+            <div class="day-cell has-task">23</div>
+            <div class="day-cell">24</div>
+            <div class="day-cell has-task">25</div>
+
+            <!-- Week 5 (Oct 26 - Nov 1) -->
+            <div class="day-cell">26</div>
+            <div class="day-cell">27</div>
+            <div class="day-cell has-task">28</div>
+            <div class="day-cell">29</div>
+            <div class="day-cell">30</div>
+            <div class="day-cell">31</div>
+            <div class="day-cell other-month has-task">1</div>
+          </div>
+        </div>
+
+        <!-- Right Panel: Day Details + Reminders -->
+        <div class="day-detail-panel">
+
+          <!-- Selected Day Tasks -->
+          <div class="day-detail-card glass-card">
+            <h4>📅 Selected Day</h4>
+            <p class="day-detail-date">Monday, October 20, 2025</p>
+
+            <div class="day-task-list">
+              <div class="day-task-item">
+                <span class="dt-time">09:00</span>
+                <div class="dt-info">
+                  <div class="dt-title">Complete SRS Document</div>
+                  <div class="dt-desc">Write all functional and non-functional requirements</div>
+                  <div class="dt-badges">
+                    <span class="badge badge-high">High</span>
+                    <span class="badge badge-school">School</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-task-item">
+                <span class="dt-time">14:00</span>
+                <div class="dt-info">
+                  <div class="dt-title">Phase 1 Discussion</div>
+                  <div class="dt-desc">Present SRS and system prototypes to the instructor</div>
+                  <div class="dt-badges">
+                    <span class="badge badge-high">High</span>
+                    <span class="badge badge-school">School</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upcoming Reminders -->
+          <div class="reminder-card glass-card">
+            <h4>🔔 Upcoming Reminders</h4>
+            <div class="reminder-list">
+              <div class="reminder-item urgent">
+                <span class="rem-icon">🚨</span>
+                <div class="rem-info">
+                  <div class="rem-title">SRS Document Due</div>
+                  <div class="rem-time">Oct 20 · In 3 days · High Priority</div>
+                </div>
+              </div>
+              <div class="reminder-item">
+                <span class="rem-icon">📊</span>
+                <div class="rem-info">
+                  <div class="rem-title">Presentation Slides</div>
+                  <div class="rem-time">Oct 22 · In 5 days · Medium Priority</div>
+                </div>
+              </div>
+              <div class="reminder-item">
+                <span class="rem-icon">💾</span>
+                <div class="rem-info">
+                  <div class="rem-title">Database Schema Design</div>
+                  <div class="rem-time">Oct 25 · In 8 days · High Priority</div>
+                </div>
+              </div>
+              <div class="reminder-item">
+                <span class="rem-icon">📖</span>
+                <div class="rem-info">
+                  <div class="rem-title">Read Testing Chapter</div>
+                  <div class="rem-time">Oct 28 · In 11 days · Low Priority</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+</body>
+</html>

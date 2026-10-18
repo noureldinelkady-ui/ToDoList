@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TaskFlow Admin Dashboard - Monitor users, view reports, and track task completion rates.">
+  <title>TaskFlow - Admin Dashboard</title>
+  <!-- Shared Common Styles -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- Member 5: Admin Styles -->
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <div class="app-layout">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">✓</div>
+        <h1>TaskFlow</h1>
+      </div>
+
+      <nav class="sidebar-nav">
+        <span class="nav-section-title">Main</span>
+        <a href="dashboard.html" class="nav-link">
+          <span class="nav-icon">📊</span>
+          Dashboard
+        </a>
+        <a href="add-task.html" class="nav-link">
+          <span class="nav-icon">➕</span>
+          Add Task
+        </a>
+        <a href="categories.html" class="nav-link">
+          <span class="nav-icon">📁</span>
+          Categories
+        </a>
+        <a href="calendar.html" class="nav-link">
+          <span class="nav-icon">📅</span>
+          Calendar
+          <span class="nav-badge">3</span>
+        </a>
+
+        <span class="nav-section-title">Admin</span>
+        <a href="admin.html" class="nav-link active">
+          <span class="nav-icon">⚙️</span>
+          Admin Panel
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user">
+          <div class="user-avatar">NE</div>
+          <div class="user-info">
+            <div class="user-name">Nour Elkady</div>
+            <div class="user-email">nour@taskflow.com</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div>
+          <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+          <h2>Admin Dashboard</h2>
+          <p>Monitor active users, track task completion, and view usage reports.</p>
+        </div>
+        <div style="display:flex;gap:12px;">
+          <button class="btn btn-secondary">📄 Export Report</button>
+          <button class="btn btn-primary">+ Add User</button>
+        </div>
+      </div>
+
+      <!-- Admin Stats -->
+      <div class="admin-stats">
+        <div class="admin-stat-card glass-card">
+          <div class="stat-header">
+            <div class="stat-icon blue">👥</div>
+            <span class="stat-trend up">↑ 15%</span>
+          </div>
+          <div class="stat-value">142</div>
+          <div class="stat-label">Total Users</div>
+        </div>
+        <div class="admin-stat-card glass-card">
+          <div class="stat-header">
+            <div class="stat-icon green">✅</div>
+            <span class="stat-trend up">↑ 23%</span>
+          </div>
+          <div class="stat-value">87</div>
+          <div class="stat-label">Active Users</div>
+        </div>
+        <div class="admin-stat-card glass-card">
+          <div class="stat-header">
+            <div class="stat-icon purple">📋</div>
+            <span class="stat-trend up">↑ 18%</span>
+          </div>
+          <div class="stat-value">1,247</div>
+          <div class="stat-label">Total Tasks Created</div>
+        </div>
+        <div class="admin-stat-card glass-card">
+          <div class="stat-header">
+            <div class="stat-icon orange">📈</div>
+            <span class="stat-trend up">↑ 5%</span>
+          </div>
+          <div class="stat-value">68%</div>
+          <div class="stat-label">Completion Rate</div>
+        </div>
+      </div>
+
+      <!-- Charts Row -->
+      <div class="admin-grid">
+        <!-- Bar Chart: Tasks per Week -->
+        <div class="chart-card glass-card">
+          <div class="card-header">
+            <h3>📊 Tasks Created (Last 7 Days)</h3>
+          </div>
+          <div class="bar-chart">
+            <div class="bar-col">
+              <div class="bar purple" style="height: 45%;"></div>
+              <span class="bar-label">Mon</span>
+            </div>
+            <div class="bar-col">
+              <div class="bar purple" style="height: 70%;"></div>
+              <span class="bar-label">Tue</span>
+            </div>
+            <div class="bar-col">
+              <div class="bar purple" style="height: 55%;"></div>
+              <span class="bar-label">Wed</span>
+            </div>
+            <div class="bar-col">
+              <div class="bar green" style="height: 90%;"></div>
+              <span class="bar-label">Thu</span>
+            </div>
+            <div class="bar-col">
+              <div class="bar purple" style="height: 60%;"></div>
+              <span class="bar-label">Fri</span>
+            </div>
+            <div class="bar-col">
+              <div class="bar blue" style="height: 35%;"></div>
+              <span class="bar-label">Sat</span>
+            </div>
+            <div class="bar-col">
+              <div class="bar blue" style="height: 25%;"></div>
+              <span class="bar-label">Sun</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Donut Chart: Tasks by Category -->
+        <div class="chart-card glass-card">
+          <div class="card-header">
+            <h3>📁 Tasks by Category</h3>
+          </div>
+          <div class="donut-chart-container">
+            <div class="donut-chart">
+              <div class="donut-center">
+                <span class="donut-value">1,247</span>
+                <span class="donut-label">Total</span>
+              </div>
+            </div>
+            <div class="donut-legend">
+              <div class="legend-item">
+                <div class="legend-dot purple"></div>
+                <span class="legend-label">Work</span>
+                <span class="legend-value">36%</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-dot green"></div>
+                <span class="legend-label">Personal</span>
+                <span class="legend-value">28%</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-dot yellow"></div>
+                <span class="legend-label">School</span>
+                <span class="legend-value">19%</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-dot red"></div>
+                <span class="legend-label">Health</span>
+                <span class="legend-value">17%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Users Table -->
+      <div class="users-table-card glass-card">
+        <div class="card-header">
+          <h3>👥 Active Users</h3>
+          <button class="btn btn-ghost btn-sm">View All →</button>
+        </div>
+        <table class="data-table" id="users-table">
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Status</th>
+              <th>Tasks Created</th>
+              <th>Completion</th>
+              <th>Last Active</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="user-cell">
+                  <div class="table-avatar av-1">NE</div>
+                  <div class="user-details">
+                    <div class="table-name">Nour Elkady</div>
+                    <div class="table-email">nour@taskflow.com</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <span class="status-badge active">
+                  <span class="status-dot"></span> Active
+                </span>
+              </td>
+              <td>24</td>
+              <td>
+                <div class="mini-progress">
+                  <div class="mini-bar"><div class="mini-fill" style="width:75%;"></div></div>
+                  <span class="mini-text">75%</span>
+                </div>
+              </td>
+              <td style="color:var(--text-secondary);">Just now</td>
+              <td>
+                <button class="btn btn-ghost btn-sm">View</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-cell">
+                  <div class="table-avatar av-2">AH</div>
+                  <div class="user-details">
+                    <div class="table-name">Ahmed Hassan</div>
+                    <div class="table-email">ahmed@taskflow.com</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <span class="status-badge active">
+                  <span class="status-dot"></span> Active
+                </span>
+              </td>
+              <td>31</td>
+              <td>
+                <div class="mini-progress">
+                  <div class="mini-bar"><div class="mini-fill" style="width:82%;"></div></div>
+                  <span class="mini-text">82%</span>
+                </div>
+              </td>
+              <td style="color:var(--text-secondary);">5 min ago</td>
+              <td>
+                <button class="btn btn-ghost btn-sm">View</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-cell">
+                  <div class="table-avatar av-3">SM</div>
+                  <div class="user-details">
+                    <div class="table-name">Sara Mohamed</div>
+                    <div class="table-email">sara@taskflow.com</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <span class="status-badge active">
+                  <span class="status-dot"></span> Active
+                </span>
+              </td>
+              <td>18</td>
+              <td>
+                <div class="mini-progress">
+                  <div class="mini-bar"><div class="mini-fill" style="width:61%;"></div></div>
+                  <span class="mini-text">61%</span>
+                </div>
+              </td>
+              <td style="color:var(--text-secondary);">1 hour ago</td>
+              <td>
+                <button class="btn btn-ghost btn-sm">View</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-cell">
+                  <div class="table-avatar av-4">OA</div>
+                  <div class="user-details">
+                    <div class="table-name">Omar Ali</div>
+                    <div class="table-email">omar@taskflow.com</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <span class="status-badge inactive">
+                  <span class="status-dot"></span> Inactive
+                </span>
+              </td>
+              <td>12</td>
+              <td>
+                <div class="mini-progress">
+                  <div class="mini-bar"><div class="mini-fill" style="width:42%;"></div></div>
+                  <span class="mini-text">42%</span>
+                </div>
+              </td>
+              <td style="color:var(--text-secondary);">3 days ago</td>
+              <td>
+                <button class="btn btn-ghost btn-sm">View</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-cell">
+                  <div class="table-avatar av-5">LK</div>
+                  <div class="user-details">
+                    <div class="table-name">Layla Khaled</div>
+                    <div class="table-email">layla@taskflow.com</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <span class="status-badge active">
+                  <span class="status-dot"></span> Active
+                </span>
+              </td>
+              <td>27</td>
+              <td>
+                <div class="mini-progress">
+                  <div class="mini-bar"><div class="mini-fill" style="width:89%;"></div></div>
+                  <span class="mini-text">89%</span>
+                </div>
+              </td>
+              <td style="color:var(--text-secondary);">10 min ago</td>
+              <td>
+                <button class="btn btn-ghost btn-sm">View</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+
+  </div>
+
+</body>
+</html>

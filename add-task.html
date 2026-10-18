@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create a new task with title, description, priority, deadline, and category in TaskFlow.">
+  <title>TaskFlow - Add New Task</title>
+  <!-- Shared Common Styles -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- Member 4: Task Management Styles -->
+  <link rel="stylesheet" href="css/tasks.css">
+</head>
+<body>
+
+  <div class="app-layout">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">✓</div>
+        <h1>TaskFlow</h1>
+      </div>
+
+      <nav class="sidebar-nav">
+        <span class="nav-section-title">Main</span>
+        <a href="dashboard.html" class="nav-link">
+          <span class="nav-icon">📊</span>
+          Dashboard
+        </a>
+        <a href="add-task.html" class="nav-link active">
+          <span class="nav-icon">➕</span>
+          Add Task
+        </a>
+        <a href="categories.html" class="nav-link">
+          <span class="nav-icon">📁</span>
+          Categories
+        </a>
+        <a href="calendar.html" class="nav-link">
+          <span class="nav-icon">📅</span>
+          Calendar
+          <span class="nav-badge">3</span>
+        </a>
+
+        <span class="nav-section-title">Admin</span>
+        <a href="admin.html" class="nav-link">
+          <span class="nav-icon">⚙️</span>
+          Admin Panel
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user">
+          <div class="user-avatar">NE</div>
+          <div class="user-info">
+            <div class="user-name">Nour Elkady</div>
+            <div class="user-email">nour@taskflow.com</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div>
+          <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+          <h2>Add New Task</h2>
+          <p>Create a new task with all the details you need.</p>
+        </div>
+        <a href="dashboard.html" class="btn btn-secondary">← Back to Dashboard</a>
+      </div>
+
+      <!-- Add Task Form -->
+      <div class="add-task-container">
+
+        <!-- Basic Info Card -->
+        <div class="task-form-card glass-card">
+          <h3>
+            <span class="form-section-icon">📝</span>
+            Task Details
+          </h3>
+          <form class="task-form" id="add-task-form" action="#" method="post">
+
+            <!-- Title -->
+            <div class="form-group">
+              <label class="form-label" for="task-title">Task Title <span class="required">*</span></label>
+              <input type="text" class="form-input" id="task-title" name="title" placeholder="e.g., Complete the project report" required>
+            </div>
+
+            <!-- Description -->
+            <div class="form-group">
+              <label class="form-label" for="task-desc">Description</label>
+              <textarea class="form-textarea" id="task-desc" name="description" placeholder="Add details about this task..." rows="4"></textarea>
+            </div>
+
+            <!-- Priority & Category Row -->
+            <div class="form-row">
+              <!-- Priority -->
+              <div class="form-group">
+                <label class="form-label">Priority Level <span class="required">*</span></label>
+                <div class="priority-selector">
+                  <label class="priority-option selected high">
+                    <input type="radio" name="priority" value="high" checked>
+                    <div class="priority-indicator high"></div>
+                    <span class="priority-label">High</span>
+                  </label>
+                  <label class="priority-option">
+                    <input type="radio" name="priority" value="medium">
+                    <div class="priority-indicator medium"></div>
+                    <span class="priority-label">Medium</span>
+                  </label>
+                  <label class="priority-option">
+                    <input type="radio" name="priority" value="low">
+                    <div class="priority-indicator low"></div>
+                    <span class="priority-label">Low</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Category -->
+              <div class="form-group">
+                <label class="form-label" for="task-category">Category <span class="required">*</span></label>
+                <select class="form-select" id="task-category" name="category" required>
+                  <option value="" disabled>Select a category</option>
+                  <option value="work" selected>💼 Work</option>
+                  <option value="personal">🏠 Personal</option>
+                  <option value="school">🎓 School</option>
+                  <option value="health">❤️ Health</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Deadline & Time Row -->
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="task-deadline">Deadline <span class="required">*</span></label>
+                <input type="date" class="form-input" id="task-deadline" name="deadline" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="task-time">Time (optional)</label>
+                <input type="time" class="form-input" id="task-time" name="time">
+              </div>
+            </div>
+
+            <!-- Reminder Toggle -->
+            <div class="reminder-toggle">
+              <div class="toggle-text">
+                <span class="toggle-label">🔔 Enable Reminder</span>
+                <span class="toggle-desc">Get notified before the deadline</span>
+              </div>
+              <div class="toggle-switch active"></div>
+            </div>
+
+            <!-- Reminder Options (visible when toggle is on) -->
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="reminder-time">Remind Me</label>
+                <select class="form-select" id="reminder-time" name="reminder_time">
+                  <option value="15">15 minutes before</option>
+                  <option value="30">30 minutes before</option>
+                  <option value="60" selected>1 hour before</option>
+                  <option value="1440">1 day before</option>
+                  <option value="10080">1 week before</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="reminder-method">Reminder Method</label>
+                <select class="form-select" id="reminder-method" name="reminder_method">
+                  <option value="notification" selected>🔔 Push Notification</option>
+                  <option value="email">📧 Email</option>
+                  <option value="both">📧🔔 Both</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Form Actions -->
+            <div class="form-actions">
+              <a href="dashboard.html" class="btn btn-secondary">Cancel</a>
+              <button type="reset" class="btn btn-ghost">Clear Form</button>
+              <button type="submit" class="btn btn-primary">Create Task →</button>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+</body>
+</html>

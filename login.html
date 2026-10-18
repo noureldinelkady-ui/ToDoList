@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Log in to your TaskFlow account to manage your tasks, deadlines, and categories.">
+  <title>TaskFlow - Log In</title>
+  <!-- Shared Common Styles -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- Member 2: Auth Pages Styles -->
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+  <div class="auth-page">
+
+    <!-- Back Link -->
+    <a href="index.html" class="auth-back-link">← Back to Home</a>
+
+    <!-- ===== LEFT: Login Form ===== -->
+    <div class="auth-left">
+      <div class="auth-form-container">
+
+        <div class="auth-brand">
+          <div class="brand-icon">✓</div>
+          <h1>TaskFlow</h1>
+        </div>
+
+        <h2>Welcome Back</h2>
+        <p class="auth-subtitle">Log in to your account to continue managing your tasks.</p>
+
+        <form class="auth-form" id="login-form" action="dashboard.html" method="get">
+          <!-- Email -->
+          <div class="form-group">
+            <label class="form-label" for="login-email">Email Address</label>
+            <div class="input-wrapper">
+              <span class="input-icon">📧</span>
+              <input type="email" class="form-input" id="login-email" name="email" placeholder="Enter your email" required>
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group">
+            <label class="form-label" for="login-password">Password</label>
+            <div class="input-wrapper">
+              <span class="input-icon">🔒</span>
+              <input type="password" class="form-input" id="login-password" name="password" placeholder="Enter your password" required>
+              <button type="button" class="password-toggle" title="Show password">👁</button>
+            </div>
+          </div>
+
+          <!-- Remember + Forgot -->
+          <div class="auth-extras">
+            <label>
+              <input type="checkbox" class="custom-checkbox" id="remember-me" name="remember">
+              Remember me
+            </label>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn btn-primary auth-submit">Log In</button>
+
+          <!-- Divider -->
+          <div class="auth-divider">or continue with</div>
+
+          <!-- Social Buttons -->
+          <div class="social-buttons">
+            <button type="button" class="social-btn">
+              <span class="social-icon">🔵</span>
+              Google
+            </button>
+            <button type="button" class="social-btn">
+              <span class="social-icon">⚫</span>
+              GitHub
+            </button>
+          </div>
+        </form>
+
+        <div class="auth-footer">
+          Don't have an account? <a href="register.html">Sign up for free</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== RIGHT: Illustration Panel ===== -->
+    <div class="auth-right">
+      <div class="auth-right-content">
+        <div class="auth-illustration">📋</div>
+        <h3>Manage Your Tasks Easily</h3>
+        <p>Stay organized with priorities, deadlines, and categories. Everything you need in one place.</p>
+
+        <div class="auth-features">
+          <div class="auth-feature-item">
+            <div class="auth-feature-icon">✅</div>
+            <div class="auth-feature-text">
+              <strong>Create &amp; Organize</strong>
+              Add tasks with deadlines and priorities
+            </div>
+          </div>
+          <div class="auth-feature-item">
+            <div class="auth-feature-icon">📊</div>
+            <div class="auth-feature-text">
+              <strong>Track Progress</strong>
+              Monitor your completion rates
+            </div>
+          </div>
+          <div class="auth-feature-item">
+            <div class="auth-feature-icon">🔔</div>
+            <div class="auth-feature-text">
+              <strong>Get Reminders</strong>
+              Never miss a deadline again
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

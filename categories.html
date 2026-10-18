@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manage task categories in TaskFlow. Create, edit, and organize categories like Work, Personal, School.">
+  <title>TaskFlow - Categories</title>
+  <!-- Shared Common Styles -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- Member 4: Task Management Styles -->
+  <link rel="stylesheet" href="css/tasks.css">
+</head>
+<body>
+
+  <div class="app-layout">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">✓</div>
+        <h1>TaskFlow</h1>
+      </div>
+
+      <nav class="sidebar-nav">
+        <span class="nav-section-title">Main</span>
+        <a href="dashboard.html" class="nav-link">
+          <span class="nav-icon">📊</span>
+          Dashboard
+        </a>
+        <a href="add-task.html" class="nav-link">
+          <span class="nav-icon">➕</span>
+          Add Task
+        </a>
+        <a href="categories.html" class="nav-link active">
+          <span class="nav-icon">📁</span>
+          Categories
+        </a>
+        <a href="calendar.html" class="nav-link">
+          <span class="nav-icon">📅</span>
+          Calendar
+          <span class="nav-badge">3</span>
+        </a>
+
+        <span class="nav-section-title">Admin</span>
+        <a href="admin.html" class="nav-link">
+          <span class="nav-icon">⚙️</span>
+          Admin Panel
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user">
+          <div class="user-avatar">NE</div>
+          <div class="user-info">
+            <div class="user-name">Nour Elkady</div>
+            <div class="user-email">nour@taskflow.com</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div>
+          <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+          <h2>Categories</h2>
+          <p>Group and organize your tasks by category for better management.</p>
+        </div>
+      </div>
+
+      <!-- Categories Grid -->
+      <div class="categories-grid">
+        <!-- Work -->
+        <div class="category-card glass-card">
+          <div class="cat-header">
+            <div class="cat-icon work">💼</div>
+            <div class="cat-actions">
+              <button class="cat-action-btn" title="Edit">✏️</button>
+              <button class="cat-action-btn" title="Delete">🗑️</button>
+            </div>
+          </div>
+          <div class="cat-name">Work</div>
+          <div class="cat-count">8 tasks · 6 completed</div>
+          <div class="cat-progress">
+            <div class="cat-progress-fill work" style="width: 75%;"></div>
+          </div>
+        </div>
+
+        <!-- Personal -->
+        <div class="category-card glass-card">
+          <div class="cat-header">
+            <div class="cat-icon personal">🏠</div>
+            <div class="cat-actions">
+              <button class="cat-action-btn" title="Edit">✏️</button>
+              <button class="cat-action-btn" title="Delete">🗑️</button>
+            </div>
+          </div>
+          <div class="cat-name">Personal</div>
+          <div class="cat-count">5 tasks · 2 completed</div>
+          <div class="cat-progress">
+            <div class="cat-progress-fill personal" style="width: 40%;"></div>
+          </div>
+        </div>
+
+        <!-- School -->
+        <div class="category-card glass-card">
+          <div class="cat-header">
+            <div class="cat-icon school">🎓</div>
+            <div class="cat-actions">
+              <button class="cat-action-btn" title="Edit">✏️</button>
+              <button class="cat-action-btn" title="Delete">🗑️</button>
+            </div>
+          </div>
+          <div class="cat-name">School</div>
+          <div class="cat-count">7 tasks · 4 completed</div>
+          <div class="cat-progress">
+            <div class="cat-progress-fill school" style="width: 57%;"></div>
+          </div>
+        </div>
+
+        <!-- Health -->
+        <div class="category-card glass-card">
+          <div class="cat-header">
+            <div class="cat-icon health">❤️</div>
+            <div class="cat-actions">
+              <button class="cat-action-btn" title="Edit">✏️</button>
+              <button class="cat-action-btn" title="Delete">🗑️</button>
+            </div>
+          </div>
+          <div class="cat-name">Health</div>
+          <div class="cat-count">4 tasks · 3 completed</div>
+          <div class="cat-progress">
+            <div class="cat-progress-fill health" style="width: 75%;"></div>
+          </div>
+        </div>
+
+        <!-- Add Category Card -->
+        <div class="add-category-card glass-card">
+          <div class="add-icon">+</div>
+          <span>Add New Category</span>
+        </div>
+      </div>
+
+      <!-- Tasks by Category Section -->
+      <div class="category-tasks-section">
+        <div class="category-tasks-card glass-card">
+          <h3>📁 Work Tasks</h3>
+          <div class="category-task-list">
+            <div class="category-task-item">
+              <div class="ct-checkbox checked"></div>
+              <div class="ct-body">
+                <div class="ct-title">Set Up Project Repository</div>
+                <div class="ct-deadline">📅 Oct 10, 2025 — Completed</div>
+              </div>
+              <span class="badge badge-high">High</span>
+            </div>
+            <div class="category-task-item">
+              <div class="ct-checkbox"></div>
+              <div class="ct-body">
+                <div class="ct-title">Design Database Schema</div>
+                <div class="ct-deadline">📅 Oct 25, 2025</div>
+              </div>
+              <span class="badge badge-high">High</span>
+            </div>
+            <div class="category-task-item">
+              <div class="ct-checkbox checked"></div>
+              <div class="ct-body">
+                <div class="ct-title">Team Meeting — Project Kickoff</div>
+                <div class="ct-deadline">📅 Sep 25, 2025 — Completed</div>
+              </div>
+              <span class="badge badge-medium">Medium</span>
+            </div>
+            <div class="category-task-item">
+              <div class="ct-checkbox"></div>
+              <div class="ct-body">
+                <div class="ct-title">Write API Documentation</div>
+                <div class="ct-deadline">📅 Nov 5, 2025</div>
+              </div>
+              <span class="badge badge-low">Low</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="category-tasks-card glass-card" style="margin-top: 20px;">
+          <h3>🎓 School Tasks</h3>
+          <div class="category-task-list">
+            <div class="category-task-item">
+              <div class="ct-checkbox"></div>
+              <div class="ct-body">
+                <div class="ct-title">Complete Software Requirements Document</div>
+                <div class="ct-deadline" style="color: var(--high-priority);">📅 Oct 20, 2025 — Overdue</div>
+              </div>
+              <span class="badge badge-high">High</span>
+            </div>
+            <div class="category-task-item">
+              <div class="ct-checkbox"></div>
+              <div class="ct-body">
+                <div class="ct-title">Prepare Presentation Slides</div>
+                <div class="ct-deadline">📅 Oct 22, 2025</div>
+              </div>
+              <span class="badge badge-medium">Medium</span>
+            </div>
+            <div class="category-task-item">
+              <div class="ct-checkbox"></div>
+              <div class="ct-body">
+                <div class="ct-title">Read Chapter 5 — Software Testing</div>
+                <div class="ct-deadline">📅 Oct 28, 2025</div>
+              </div>
+              <span class="badge badge-low">Low</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+</body>
+</html>

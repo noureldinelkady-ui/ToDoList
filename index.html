@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TaskFlow - A modern to-do list application to organize your tasks, set priorities, deadlines, and boost your productivity.">
+  <title>TaskFlow - Organize Your Life, One Task at a Time</title>
+  <!-- Shared Common Styles -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- Member 1: Landing Page Styles -->
+  <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="landing-nav" id="main-nav">
+    <div class="nav-brand">
+      <div class="brand-icon">✓</div>
+      <h1>TaskFlow</h1>
+    </div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#get-started">Get Started</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-ghost">Log In</a>
+      <a href="register.html" class="btn btn-primary">Sign Up Free</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Now available — Start organizing today
+        </div>
+        <h2>
+          Organize Your Life,<br>
+          <span class="gradient-text">One Task at a Time</span>
+        </h2>
+        <p>
+          Create, prioritize, and manage your tasks effortlessly. Set deadlines, 
+          categorize your work, and never miss an important task again.
+        </p>
+        <div class="hero-buttons">
+          <a href="register.html" class="btn btn-primary btn-lg">Get Started Free →</a>
+          <a href="#features" class="btn btn-secondary btn-lg">Learn More</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <!-- Floating Badge Top -->
+        <div class="floating-badge badge-top">
+          <div class="fb-icon green">✓</div>
+          <div>
+            <strong style="font-size:0.85rem;">12 Tasks Done</strong><br>
+            <span style="color:var(--text-muted);font-size:0.7rem;">Today's progress</span>
+          </div>
+        </div>
+
+        <!-- App Mockup -->
+        <div class="hero-mockup">
+          <div class="mockup-header">
+            <div class="mockup-dot red"></div>
+            <div class="mockup-dot yellow"></div>
+            <div class="mockup-dot green"></div>
+          </div>
+          <div class="mockup-task completed">
+            <div class="mockup-checkbox done"></div>
+            <span class="mockup-task-text">Complete project proposal</span>
+            <span class="badge badge-high">High</span>
+          </div>
+          <div class="mockup-task completed">
+            <div class="mockup-checkbox done"></div>
+            <span class="mockup-task-text">Review team feedback</span>
+            <span class="badge badge-medium">Med</span>
+          </div>
+          <div class="mockup-task">
+            <div class="mockup-checkbox"></div>
+            <span class="mockup-task-text">Design dashboard layout</span>
+            <span class="badge badge-high">High</span>
+          </div>
+          <div class="mockup-task">
+            <div class="mockup-checkbox"></div>
+            <span class="mockup-task-text">Prepare presentation slides</span>
+            <span class="badge badge-medium">Med</span>
+          </div>
+          <div class="mockup-task">
+            <div class="mockup-checkbox"></div>
+            <span class="mockup-task-text">Update documentation</span>
+            <span class="badge badge-low">Low</span>
+          </div>
+        </div>
+
+        <!-- Floating Badge Bottom -->
+        <div class="floating-badge badge-bottom">
+          <div class="fb-icon purple">🔔</div>
+          <div>
+            <strong style="font-size:0.85rem;">Deadline Alert</strong><br>
+            <span style="color:var(--text-muted);font-size:0.7rem;">Project due in 2 days</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES SECTION ===== -->
+  <section class="features-section" id="features">
+    <div class="section-title">
+      <h3>Everything You Need to Stay Organized</h3>
+      <p>Powerful features designed to help you manage tasks, hit deadlines, and stay productive.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card glass-card">
+        <div class="feature-icon purple">📝</div>
+        <h4>Task Management</h4>
+        <p>Create, update, and delete tasks with ease. Each task includes a title, description, and deadline.</p>
+      </div>
+      <div class="feature-card glass-card">
+        <div class="feature-icon red">🎯</div>
+        <h4>Priority Levels</h4>
+        <p>Assign High, Medium, or Low priority to each task for better focus and time management.</p>
+      </div>
+      <div class="feature-card glass-card">
+        <div class="feature-icon yellow">⏰</div>
+        <h4>Deadlines &amp; Reminders</h4>
+        <p>Set deadlines for tasks and get timely reminders so you never miss an important date.</p>
+      </div>
+      <div class="feature-card glass-card">
+        <div class="feature-icon green">📁</div>
+        <h4>Task Categories</h4>
+        <p>Organize tasks into categories like Work, Personal, and School for easier filtering.</p>
+      </div>
+      <div class="feature-card glass-card">
+        <div class="feature-icon blue">🔍</div>
+        <h4>Filter &amp; Sort</h4>
+        <p>Sort tasks by deadline, priority, or category. Find exactly what you need instantly.</p>
+      </div>
+      <div class="feature-card glass-card">
+        <div class="feature-icon cyan">🔒</div>
+        <h4>User Authentication</h4>
+        <p>Sign up and log in to save your tasks across sessions and access them from any device.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how-section" id="how-it-works">
+    <div class="section-title">
+      <h3>How It Works</h3>
+      <p>Get started in just three simple steps and take control of your tasks.</p>
+    </div>
+
+    <div class="steps-container">
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h4>Create Your Account</h4>
+          <p>Sign up for free in seconds. Your data is securely saved across all your sessions and devices.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h4>Add &amp; Organize Tasks</h4>
+          <p>Create tasks with titles, descriptions, deadlines, priorities, and categories. Organize everything your way.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h4>Stay on Track</h4>
+          <p>Use filters, sorting, and reminders to always know what's next. Track your progress on the dashboard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section" id="get-started">
+    <div class="cta-card">
+      <h3>Ready to Get Organized?</h3>
+      <p>Join thousands of users who trust TaskFlow to manage their daily tasks and boost productivity.</p>
+      <div class="cta-buttons">
+        <a href="register.html" class="btn btn-primary btn-lg">Create Free Account</a>
+        <a href="login.html" class="btn btn-secondary btn-lg">Log In</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="landing-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="brand-icon">✓</div>
+        <span>TaskFlow</span>
+      </div>
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Sign Up</a>
+      </div>
+      <span class="footer-copy">&copy; 2025 TaskFlow. All rights reserved.</span>
+    </div>
+  </footer>
+
+</body>
+</html>

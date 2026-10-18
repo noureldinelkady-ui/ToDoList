@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create your TaskFlow account to start organizing tasks, setting priorities, and managing deadlines.">
+  <title>TaskFlow - Create Account</title>
+  <!-- Shared Common Styles -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- Member 2: Auth Pages Styles -->
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+  <div class="auth-page">
+
+    <!-- Back Link -->
+    <a href="index.html" class="auth-back-link">← Back to Home</a>
+
+    <!-- ===== LEFT: Registration Form ===== -->
+    <div class="auth-left">
+      <div class="auth-form-container">
+
+        <div class="auth-brand">
+          <div class="brand-icon">✓</div>
+          <h1>TaskFlow</h1>
+        </div>
+
+        <h2>Create Your Account</h2>
+        <p class="auth-subtitle">Sign up to start organizing your tasks and boost your productivity.</p>
+
+        <form class="auth-form" id="register-form" action="dashboard.html" method="get">
+
+          <!-- First & Last Name -->
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="reg-firstname">First Name</label>
+              <div class="input-wrapper">
+                <span class="input-icon">👤</span>
+                <input type="text" class="form-input" id="reg-firstname" name="firstname" placeholder="First name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="reg-lastname">Last Name</label>
+              <div class="input-wrapper">
+                <span class="input-icon">👤</span>
+                <input type="text" class="form-input" id="reg-lastname" name="lastname" placeholder="Last name" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label class="form-label" for="reg-email">Email Address</label>
+            <div class="input-wrapper">
+              <span class="input-icon">📧</span>
+              <input type="email" class="form-input" id="reg-email" name="email" placeholder="Enter your email" required>
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group">
+            <label class="form-label" for="reg-password">Password</label>
+            <div class="input-wrapper">
+              <span class="input-icon">🔒</span>
+              <input type="password" class="form-input" id="reg-password" name="password" placeholder="Create a password" required minlength="8">
+              <button type="button" class="password-toggle" title="Show password">👁</button>
+            </div>
+            <!-- Password Strength -->
+            <div class="password-strength">
+              <div class="strength-bar active strong"></div>
+              <div class="strength-bar active strong"></div>
+              <div class="strength-bar active medium"></div>
+              <div class="strength-bar"></div>
+            </div>
+            <span class="strength-text">Medium strength — add special characters</span>
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="form-group">
+            <label class="form-label" for="reg-confirm">Confirm Password</label>
+            <div class="input-wrapper">
+              <span class="input-icon">🔒</span>
+              <input type="password" class="form-input" id="reg-confirm" name="confirm_password" placeholder="Confirm your password" required>
+            </div>
+          </div>
+
+          <!-- Terms -->
+          <div class="terms-check">
+            <input type="checkbox" class="custom-checkbox" id="terms" name="terms" required>
+            <label for="terms">
+              I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+            </label>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn btn-primary auth-submit">Create Account</button>
+
+          <!-- Divider -->
+          <div class="auth-divider">or sign up with</div>
+
+          <!-- Social -->
+          <div class="social-buttons">
+            <button type="button" class="social-btn">
+              <span class="social-icon">🔵</span>
+              Google
+            </button>
+            <button type="button" class="social-btn">
+              <span class="social-icon">⚫</span>
+              GitHub
+            </button>
+          </div>
+        </form>
+
+        <div class="auth-footer">
+          Already have an account? <a href="login.html">Log in here</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== RIGHT: Illustration Panel ===== -->
+    <div class="auth-right">
+      <div class="auth-right-content">
+        <div class="auth-illustration">🚀</div>
+        <h3>Start Your Productivity Journey</h3>
+        <p>Join TaskFlow and experience a smarter way to manage your daily tasks and projects.</p>
+
+        <div class="auth-features">
+          <div class="auth-feature-item">
+            <div class="auth-feature-icon">📁</div>
+            <div class="auth-feature-text">
+              <strong>Categorize Tasks</strong>
+              Work, Personal, School &amp; more
+            </div>
+          </div>
+          <div class="auth-feature-item">
+            <div class="auth-feature-icon">🎯</div>
+            <div class="auth-feature-text">
+              <strong>Set Priorities</strong>
+              High, Medium, Low levels
+            </div>
+          </div>
+          <div class="auth-feature-item">
+            <div class="auth-feature-icon">📅</div>
+            <div class="auth-feature-text">
+              <strong>Calendar View</strong>
+              See deadlines at a glance
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
