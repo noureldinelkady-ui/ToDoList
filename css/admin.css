@@ -1,10 +1,4 @@
-/* ============================================
-   MEMBER 5 - Admin Dashboard & Calendar Styles
-   File: css/admin.css
-   Pages: admin.html, calendar.html
-   ============================================ */
 
-/* ---- Reuse sidebar/layout structure ---- */
 .app-layout {
   display: flex;
   min-height: 100vh;
@@ -110,7 +104,7 @@
   min-height: 100vh; position: relative; z-index: 1;
 }
 
-/* ---- Page Header ---- */
+
 .page-header {
   display: flex;
   align-items: center;
@@ -129,7 +123,7 @@
   font-size: 0.875rem;
 }
 
-/* ---- Admin Stats ---- */
+
 .admin-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
